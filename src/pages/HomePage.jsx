@@ -1,18 +1,17 @@
 import React from 'react'
 import EditorsPick from '../components/EditorsPick'
 import BestSeller from '../components/BestSeller'
-import ProductSlider from '../components/ProductSlider'
 import PromoCard from '../components/PromoCard'
 import FeaturedPosts from '../components/FeaturedPosts'
-import PageContent from '../layout/PageContent'
+import Slider from '../layout/Slider'
 
 export default function HomePage() {
     return (
         <div >
-            <PageContent />
+            <Slider />
             <EditorsPick />
             <BestSeller />
-            <ProductSlider />
+            <Slider />
             <PromoCard />
             <FeaturedPosts />
 
