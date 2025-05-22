@@ -1,5 +1,5 @@
 import React from 'react'
-import { CircleUser, Facebook, Heart, Instagram, Mail, Menu, Phone, Search, ShoppingCart, Twitter, User, Youtube } from 'lucide-react'
+import { ChevronDown, CircleUser, Facebook, Heart, Instagram, Mail, Menu, Phone, Search, ShoppingCart, Twitter, User, Youtube } from 'lucide-react'
 
 export default function Header() {
     return (
@@ -37,10 +37,23 @@ export default function Header() {
                 <div className="hidden sm:flex gap-8 items-center">
                     <div className="hover:text-[#252B42] cursor-pointer">Home</div>
                     <div className="relative group cursor-pointer">
-                        <div className="hover:text-[#252B42]">Shop</div>
-                        <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white shadow-lg rounded z-10 min-w-[120px]">
-                            <a href="#" className="px-4 py-2 hover:bg-gray-100 text-[#252B42]">KADIN</a>
-                            <a href="#" className="px-4 py-2 hover:bg-gray-100 text-[#252B42]">ERKEK</a>
+                        <div className="flex items-center hover:text-[#252B42]">
+                            <span>Shop</span>
+                            <ChevronDown className="ml-1 w-4 h-4" />
+                        </div>
+                        <div className="absolute left-0 mt-2 hidden group-hover:flex group-focus-within:flex flex-col bg-white shadow-lg rounded z-10 min-w-[120px]">
+                            <a
+                                href="#"
+                                className="px-4 py-2 hover:bg-gray-100 text-[#252B42] focus:bg-gray-100"
+                            >
+                                KADIN
+                            </a>
+                            <a
+                                href="#"
+                                className="px-4 py-2 hover:bg-gray-100 text-[#252B42] focus:bg-gray-100"
+                            >
+                                ERKEK
+                            </a>
                         </div>
                     </div>
                     <div className="hover:text-[#252B42] cursor-pointer">About</div>
