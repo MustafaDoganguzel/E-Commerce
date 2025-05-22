@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import FooterLogos from "../components/FooterLogos";
 
 // Dummy product data, you can expand this as needed
 const products = [
@@ -292,7 +293,7 @@ export default function ShopPage() {
                         </button>
                     ))}
                     <button
-                        className=" h-15 w-10 px-3 py-1 rounded border border-gray-200 bg-white text-[#737373] text-sm hover:bg-[#F1F1F1] disabled:opacity-50"
+                        className=" h-15 px-3 py-1 rounded border border-gray-200 bg-white text-[#737373] text-sm hover:bg-[#F1F1F1] disabled:opacity-50"
                         onClick={() => setPage(page + 1)}
                         disabled={page === pageCount}
                     >
@@ -301,15 +302,8 @@ export default function ShopPage() {
                 </div>
             </div>
 
-            {/* Footer logos */}
-            <div className="w-full bg-white py-7 flex justify-center gap-20 border-t border-gray-100">
-                <img src="/logo/logo1.png" alt="logo1" className="h-15" />
-                <img src="/logo/logo3.png" alt="logo3" className="h-15 " />
-                <img src="/logo/logo4.png" alt="logo4" className="h-15" />
-                <img src="/logo/logo5.png" alt="logo5" className="h-15" />
-                <img src="/logo/logo6.png" alt="logo5" className="h-15" />
-                <img src="/logo/logo7.png" alt="logo5" className="h-15" />
-            </div>
+            <FooterLogos />
+
 
         </div >
     );
