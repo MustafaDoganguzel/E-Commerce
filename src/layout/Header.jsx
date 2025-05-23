@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { ChevronDown, CircleUser, Facebook, Heart, Instagram, Mail, Menu, Phone, Search, ShoppingCart, Twitter, User, Youtube } from 'lucide-react'
 
 export default function Header() {
@@ -23,7 +24,7 @@ export default function Header() {
             {/* Main Header */}
             <div className="flex items-center justify-between py-4 px-6 sm:px-12">
                 {/* Logo */}
-                <div className="text-[#252B42] text-xl font-bold tracking-wide">BANDAGE</div>
+                <Link to="/" className="text-[#252B42] text-xl font-bold tracking-wide">BANDAGE</Link>
 
                 {/* Mobile Icons */}
                 <div className="flex gap-4 sm:hidden">
@@ -35,30 +36,30 @@ export default function Header() {
 
                 {/* Desktop Menu */}
                 <div className="hidden sm:flex gap-8 items-center">
-                    <div className="hover:text-[#252B42] cursor-pointer">Home</div>
+                    <Link to="/" className="hover:text-[#252B42] cursor-pointer">Home</Link>
                     <div className="relative group cursor-pointer">
                         <div className="flex items-center hover:text-[#252B42]">
                             <span>Shop</span>
                             <ChevronDown className="ml-1 w-4 h-4" />
                         </div>
                         <div className="absolute left-0 mt-2 hidden group-hover:flex group-focus-within:flex flex-col bg-white shadow-lg rounded z-10 min-w-[120px]">
-                            <a
-                                href="#"
+                            <Link
+                                to="/shop?category=kadin"
                                 className="px-4 py-2 hover:bg-gray-100 text-[#252B42] focus:bg-gray-100"
                             >
                                 KADIN
-                            </a>
-                            <a
-                                href="#"
+                            </Link>
+                            <Link
+                                to="/shop?category=erkek"
                                 className="px-4 py-2 hover:bg-gray-100 text-[#252B42] focus:bg-gray-100"
                             >
                                 ERKEK
-                            </a>
+                            </Link>
                         </div>
                     </div>
-                    <div className="hover:text-[#252B42] cursor-pointer">About</div>
-                    <div className="hover:text-[#252B42] cursor-pointer">Contact</div>
-                    <div className="hover:text-[#252B42] cursor-pointer">Pages</div>
+                    <Link to="/about" className="hover:text-[#252B42] cursor-pointer">About</Link>
+                    <Link to="/contact" className="hover:text-[#252B42] cursor-pointer">Contact</Link>
+                    <Link to="/pages" className="hover:text-[#252B42] cursor-pointer">Pages</Link>
                 </div>
 
                 {/* Desktop User/Cart */}
@@ -76,11 +77,11 @@ export default function Header() {
 
             {/* Mobile Nav */}
             <div className="sm:hidden flex flex-col items-center gap-2 text-[#737373] text-base pb-3">
-                <div className="cursor-pointer">Home</div>
-                <div className="cursor-pointer">Shop</div>
-                <div className="cursor-pointer">About</div>
-                <div className="cursor-pointer">Contact</div>
-                <div className="cursor-pointer">Pages</div>
+                <Link to="/" className="cursor-pointer">Home</Link>
+                <Link to="/shop" className="cursor-pointer">Shop</Link>
+                <Link to="/about" className="cursor-pointer">About</Link>
+                <Link to="/contact" className="cursor-pointer">Contact</Link>
+                <Link to="/pages" className="cursor-pointer">Pages</Link>
             </div>
         </>
     )
