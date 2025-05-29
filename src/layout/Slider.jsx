@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const slides = [
     {
@@ -63,12 +64,12 @@ export default function Slider() {
                         <span className="text-white">{slide.title.split(' ').slice(1).join(' ')}</span>
                     </h2>
                     <p className="text-white text-sm sm:text-base mb-6">{slide.desc}</p>
-                    <a
-                        href={slide.ctaLink}
+                    <Link
+                        to={slide.ctaLink}
                         className="bg-[#8BC441] hover:bg-[#6fa92c] transition text-white font-bold py-2 px-7 rounded text-base"
                     >
                         {slide.cta}
-                    </a>
+                    </Link>
                 </div>
             </div>
             {/* Navigasyon Okları */}

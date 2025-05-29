@@ -39,7 +39,7 @@ export default function Header() {
                     <Link to="/" className="hover:text-[#252B42] cursor-pointer">Home</Link>
                     <div className="relative group cursor-pointer">
                         <div className="flex items-center hover:text-[#252B42]">
-                            <span>Shop</span>
+                            <Link to="/shop" className="hover:text-[#252B42] cursor-pointer">Shop</Link>
                             <ChevronDown className="ml-1 w-4 h-4" />
                         </div>
                         <div className="absolute left-0 mt-2 hidden group-hover:flex group-focus-within:flex flex-col bg-white shadow-lg rounded z-10 min-w-[120px]">

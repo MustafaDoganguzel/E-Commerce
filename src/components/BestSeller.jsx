@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const products = [
     {
@@ -81,9 +82,9 @@ export default function BestSeller() {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {products.map((product, idx) => (
-                        <a
+                        <Link
                             key={product.id}
-                            href="#"
+                            to={`/product/${product.id}`}
                             className="flex flex-col items-center group cursor-pointer"
                             tabIndex={0}
                         >
@@ -119,7 +120,7 @@ export default function BestSeller() {
                                     />
                                 ))}
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>
