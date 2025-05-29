@@ -22,9 +22,14 @@ export default function Header() {
             </div>
 
             {/* Main Header */}
-            <div className="flex items-center justify-between py-4 px-6 sm:px-12">
+            <div className="flex items-center justify-between  px-6 sm:px-12">
                 {/* Logo */}
-                <Link to="/" className="text-[#252B42] text-xl font-bold tracking-wide">BANDAGE</Link>
+                <Link to="/" className="text-[#252B42] text-xl font-bold tracking-wide">
+                    <div className='flex items-center '>
+
+                        <img src="/Logo1.png" alt="" className='w-[90px] h-[90px]' />PERI SHOP
+                    </div>
+                </Link>
 
                 {/* Mobile Icons */}
                 <div className="flex gap-4 sm:hidden">
